@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE manifesto SYSTEM "../TP2/pr.dtd">
+<manifesto>
+    <meta>
+        <supervisor>
+            <nome>José Carlos Ramalho</nome>
+            <email>jcr@di.uminho.pt</email>
+            <website url="http://www.di.uminho.pt/~jcr"/>
+        </supervisor>
+        <identificador>web1819</identificador>
+        <titulo>TP4</titulo>
+        <subtitulo>Trabalho para casa 4</subtitulo>
+        <dfim>Outubro 2018</dfim>
+    </meta>
+    <equipa>
+        <membro>
+            <foto>./foto.png</foto>
+            <nome>Rui Filipe Ferreira Araújo</nome>
+            <email>ruiaraujo012@gmail.com</email>
+            <identificador>PG38425</identificador>
+        </membro>
+    </equipa>
+    <resumo>
+        <para>Alteração de links em xml e uso de Node.js</para>
+        <para>Este é o quarto trabalho solicitado pelo docente da UC, com o objetivo da alteração de
+            links em xml, para posteriormente serem usados num servidor cirado em Node.js.</para>
+        <para>No servidor criado em Node.js, este utiliza o pathname para navegar entre ficheiros.</para>
+    </resumo>
+    <resultados>
+        <resultado url="manifesto-tp4.xml">manifesto-tp4 (XML)</resultado>
+        <resultado url="manifesto-tp4.html">manifesto-tp4 (HTML)</resultado>
+        <resultado url="https://github.com/ruiaraujo012/DWEB_18-19">Link para o GitHub</resultado>
+    </resultados>
+</manifesto>
