@@ -1,4 +1,4 @@
 # DWEB_18-19
-Repositório para a UC Desenvolvimento de Aplicações Web
+Repositório para os trabalhos práticos da unidade curricular de Desenvolvimento de Aplicações Web
 
 Rui Araújo - PG38425
