@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE manifesto SYSTEM "../TP2/pr.dtd">
+<manifesto>
+    <meta>
+        <supervisor>
+            <nome>José Carlos Ramalho</nome>
+            <email>jcr@di.uminho.pt</email>
+            <website url="http://www.di.uminho.pt/~jcr"/>
+        </supervisor>
+        <identificador>web1819</identificador>
+        <titulo>TP5</titulo>
+        <subtitulo>Trabalho Prático n.º 5</subtitulo>
+        <dfim>Outubro 2018</dfim>
+    </meta>
+    <equipa>
+        <membro>
+            <foto>./foto.png</foto>
+            <nome>Rui Filipe Ferreira Araújo</nome>
+            <email>ruiaraujo012@gmail.com</email>
+            <identificador>PG38425</identificador>
+        </membro>
+    </equipa>
+    <resumo>
+        <para>Converção de ficheiros JSON em páginas HTML através do uso de pug e Node.js</para>
+        <para>Este é o quinto trabalho prático solicitado pelo docente da UC, com o objetivo de converter 
+            ficheiros JSON em páginas HTML através do uso de pug com um servidor em Node.js.</para>
+    </resumo>
+    <resultados>
+        <resultado url="manifesto-tp5.xml">manifesto-tp5 (XML)</resultado>
+        <resultado url="manifesto-tp5.html">manifesto-tp5 (HTML)</resultado>
+        <resultado url="https://github.com/ruiaraujo012/DWEB_18-19/tree/master/TP5">Link para o GitHub do TP5</resultado>
+    </resultados>
+</manifesto>

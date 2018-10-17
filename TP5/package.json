@@ -1,0 +1,14 @@
+{
+  "name": "tp5",
+  "version": "1.0.0",
+  "description": "Trabalho Prático número 5",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "Rui Araújo PG38425",
+  "license": "ISC",
+  "dependencies": {
+    "pug": "^2.0.3"
+  }
+}
