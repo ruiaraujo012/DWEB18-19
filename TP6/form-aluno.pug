@@ -6,15 +6,26 @@ block content
                 h3 Inserir tarefa
             .w3-container
                 form.w3.container(action="/processaForm" method="POST")
-                    label.w3-teal
+                    label
                         b Descrição
-                    input.w3-input.w3-border.w3-light-grey(type="text" name="nome")
-                    label.w3-teal
-                        b Data Registo
-                    input.w3-input.w3-border.w3-light-grey(type="text" name="numero")
-                    label.w3-teal
-                        b Curso
-                    input.w3-input.w3-border.w3-light-grey(type="text" name="curso")
+                    input.w3-input.w3-border.w3-light-grey(type="text" name="descricao")
+                    label
+                        b Data
+                        - var n =  new Date();
+                        - var y = n.getFullYear();
+                        - var m = n.getMonth() + 1;
+                        - var d = n.getDate();
+                        - var data = d + "/" + m + "/" + y;
+                    input.w3-input.w3-border.w3-light-grey(type="text" name="data" value= data disabled)
+                    label
+                        b Prazo (dias)
+                    input.w3-input.w3-border.w3-light-grey(type="text" name="prazo")
+                    label
+                        b Tipo
+                    select.w3-select.w3-border
+                        option(value="Pessoal" selected) Pessoal
+                        option(value="Domestica") Domestica
+                        option(value="Académica") Académica
                     input.w3-btn.w3-blue-grey(type="submit" value="Enviar")
             footer.w3-container.w3-teal
                 adress Gerado por FormApp: 
