@@ -1,6 +1,6 @@
 var http = require("http");
 var url = require("url");
-var fs = require('fs')
+var fs = require("fs");
 var pug = require("pug");
 
 var myServer = http.createServer((req, res) => {
@@ -15,7 +15,6 @@ var myServer = http.createServer((req, res) => {
       res.write(pug.renderFile("index.pug"));
       res.end();
     } else if (purl.pathname == "/w3.css") {
-      console.log("aqui");
       res.writeHead(200, { "Content-Type": "text/css" });
       fs.readFile("stylesheets/w3.css", (erro, dados) => {
         if (!erro) res.write(dados);
