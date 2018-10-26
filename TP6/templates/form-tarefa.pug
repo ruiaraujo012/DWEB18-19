@@ -6,23 +6,26 @@ block content
                 h3 Inserir tarefa
             .w3-container
                 form.w3.container(action="/processaForm" method="POST")
+                    - var id = new Date();
+                    input.w3-input.w3-border.w3-round-large.w3-light-grey(type="hidden", name="tarefaId", value= id)
+                    input.w3-input.w3-border.w3-round-large.w3-light-grey(type="hidden", name="estado", value= 1)
                     label
                         b Descrição
-                    input.w3-input.w3-border.w3-light-grey(type="text" name="descricao")
+                    input.w3-input.w3-border.w3-round-large.w3-light-grey(type="text" name="descricao")
                     label
                         b Data
                         - var n =  new Date();
                         - var y = n.getFullYear();
                         - var m = n.getMonth() + 1;
                         - var d = n.getDate();
-                        - var data = d + "/" + m + "/" + y;
-                    input.w3-input.w3-border.w3-light-grey(type="text" name="data" value= data disabled)
+                        - var data = "" + d + "/" + m + "/" + y + "";
+                    input.w3-input.w3-border.w3-round-large.w3-light-grey(type="text" name="data" value= data readonly)
                     label
                         b Prazo (dias)
-                    input.w3-input.w3-border.w3-light-grey(type="text" name="prazo")
+                    input.w3-input.w3-border.w3-round-large.w3-light-grey(type="text" name="prazo")
                     label
                         b Tipo
-                    select.w3-select.w3-border
+                    select.w3-select.w3-border(name="tipo")
                         option(value="Pessoal" selected) Pessoal
                         option(value="Domestica") Domestica
                         option(value="Académica") Académica

@@ -1,0 +1,30 @@
+extends layout
+block content
+    .w3-container
+        .w3-card-4
+            header.w3-container.w3-teal
+                h3.w3-left-align Lista de Tarefas
+                    a(href='/criar')
+                        i.w3-xxlarge.material-icons.w3-right note_add
+            .w3-container
+                table.w3-table-all  
+                    tr
+                        th Descrição
+                        th Data Registo
+                        th Prazo
+                        th Tipo
+                        th Ações
+                        each lt in lista
+                            if lt.estado == '1'
+                                tr
+                                    td= lt.descricao
+                                    td= lt.data
+                                    td= lt.prazo
+                                    td= lt.tipo
+                                    td.w3-left
+                                        a(href='/delete?tarefaId=' + lt.tarefaId)
+                                            i.w3-xxlarge.material-icons.w3-right delete
+                                        a(href='/check?tarefaId=' + lt.tarefaId)
+                                            i.w3-xxlarge.material-icons.w3-right check_box
+            footer.w3-container.w3-teal
+                adress Gerado por PG38425
