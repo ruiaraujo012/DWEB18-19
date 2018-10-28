@@ -1,1 +1,26 @@
-[]
+[
+    {
+        "tarefaId": "2018-10-28T12:11:22.102Z",
+        "estado": "0",
+        "descricao": "Começar TP6 de DWeb",
+        "data": "23/10/2018",
+        "prazo": "6",
+        "tipo": "Académica"
+    },
+    {
+        "tarefaId": "2018-10-28T12:12:54.179Z",
+        "estado": "2",
+        "descricao": "Acabar TP6 de DWeb",
+        "data": "28/10/2018",
+        "prazo": "1",
+        "tipo": "Académica"
+    },
+    {
+        "tarefaId": "2018-10-28T12:13:19.063Z",
+        "estado": "1",
+        "descricao": "Entregar TP6 de DWeb",
+        "data": "28/10/2018",
+        "prazo": "1",
+        "tipo": "Académica"
+    }
+]

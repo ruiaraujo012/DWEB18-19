@@ -39,7 +39,7 @@ var myServer = http.createServer((req, res) => {
           var pos = 0;
           for (let i = 0; i < tarefas.length; i++) {
             if (tarefas[i].tarefaId == query.tarefaId) {
-              tarefas[i].estado = '0'
+              tarefas[i].estado = '2'
               var tarefaEditada = tarefas
               delete tarefas
               jsonfile.writeFile(myBD, tarefaEditada, erro => {

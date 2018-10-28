@@ -11,7 +11,7 @@ block content
                     tr
                         th Descrição
                         th Data Registo
-                        th Prazo
+                        th Prazo (dias)
                         th Tipo
                         th Ações
                         each lt in lista
@@ -23,8 +23,21 @@ block content
                                     td= lt.tipo
                                     td.w3-left
                                         a(href='/delete?tarefaId=' + lt.tarefaId)
-                                            i.w3-xxlarge.material-icons.w3-right delete
+                                            i.w3-xlarge.material-icons.w3-right delete
                                         a(href='/check?tarefaId=' + lt.tarefaId)
-                                            i.w3-xxlarge.material-icons.w3-right check_box
+                                            i.w3-xlarge.material-icons.w3-right check_box
+                            else if lt.estado == '2'
+                                tr.w3-grey.w3-opacity
+                                    td 
+                                        s= lt.descricao
+                                    td
+                                        s= lt.data
+                                    td
+                                        s= lt.prazo
+                                    td
+                                        s= lt.tipo
+                                    td.w3-left
+                                        a(href='/delete?tarefaId=' + lt.tarefaId)
+                                            i.w3-xlarge.material-icons.w3-right delete
             footer.w3-container.w3-teal
                 adress Gerado por PG38425
