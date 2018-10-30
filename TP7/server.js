@@ -58,6 +58,7 @@ app.get('/w3.css', (req, res) => {
  */
 app.post('/processaForm', (req, res) => {
     var form = new formidable.IncomingForm()
+    console.dir(formidable.EventEmitter)
     form.parse(req, (erro, fields, files) => {
         var fenviado = files.ficheiro.path
         var fnovo = './uploads/' + files.ficheiro.name
