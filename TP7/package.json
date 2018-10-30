@@ -1,0 +1,30 @@
+{
+  "name": "tp7",
+  "version": "1.0.0",
+  "description": "Receber e armazenar ficheiros",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruiaraujo012/DWEB_18-19.git"
+  },
+  "author": "Rui Araújo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruiaraujo012/DWEB_18-19/issues"
+  },
+  "homepage": "https://github.com/ruiaraujo012/DWEB_18-19#readme",
+  "devDependencies": {
+    "nodemon": "^1.18.5"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "jsonfile": "^5.0.0",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.3"
+  }
+}
