@@ -6,6 +6,8 @@ block content
                 h3.w3-left-align Ficheiros
             .w3-container
                 form.w3-container(action="/processaForm" method="POST" enctype='multipart/form-data')
+                    - var id = new Date();
+                    input.w3-input.w3-border.w3-round-large.w3-light-grey(type="hidden", name="id", value= id)
                     .w3-row-padding.w3-padding-24
                         .w3-third
                             input.w3-input.w3-border.w3-light-grey(type="file" name="ficheiro")
@@ -14,7 +16,7 @@ block content
                         .w3-third
                             input.w3-btn.w3-blue-grey(type="submit" value="Enviar")
                 hr
-            .w3-container
+            .w3-container.w3-padding-24
                 h3.w3-center Lista de Ficheiros
                 table.w3-table-all
                     tr
@@ -22,11 +24,8 @@ block content
                         th Descrição
                     each f in files
                             tr
-                                td= f.tarefaId
-                                td= f.descricao
-                    //each f in files
-                            tr
-                                td f.file Adicionar link
+                                td
+                                    a(href='/uploads/' + f.name target="_blank")= f.name
                                 td= f.desc
             footer.w3-container.w3-teal
                 adress Gerado por PG38425

@@ -17,9 +17,6 @@
     "url": "https://github.com/ruiaraujo012/DWEB_18-19/issues"
   },
   "homepage": "https://github.com/ruiaraujo012/DWEB_18-19#readme",
-  "devDependencies": {
-    "nodemon": "^1.18.5"
-  },
   "dependencies": {
     "express": "^4.16.4",
     "formidable": "^1.2.1",

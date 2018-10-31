@@ -11,6 +11,7 @@ var myBD = 'files.json'
 var app = express()
 
 app.use(logger('dev'))
+app.use('/uploads', express.static(__dirname + '/uploads'))
 
 /*
  * GET /
@@ -58,16 +59,36 @@ app.get('/w3.css', (req, res) => {
  */
 app.post('/processaForm', (req, res) => {
     var form = new formidable.IncomingForm()
-    console.dir(formidable.EventEmitter)
+
     form.parse(req, (erro, fields, files) => {
         var fenviado = files.ficheiro.path
         var fnovo = './uploads/' + files.ficheiro.name
 
+        var dados = {
+            id: fields.id,
+            name: files.ficheiro.name,
+            desc: fields.desc
+        }
+
         fs.rename(fenviado, fnovo, erro => {
             if (!erro) {
-                console.log('Ficheiro recebido e guardado com sucesso!')
-                res.redirect('/')
-                res.end()
+                jsonfile.readFile(myBD, (erro, ficheiros) => {
+                    if (!erro) {
+                        ficheiros.push(dados)
+                        console.dir(ficheiros)
+                        jsonfile.writeFile(myBD, ficheiros, erro => {
+                            if (erro) console.log(erro)
+                            else console.log('Ficheiro recebido e guardado com sucesso!')
+                        })
+                        res.redirect('back')
+                        res.end()
+                    } else {
+                        res.write(pug.renderFile('templates/erro.pug', {
+                            e: 'Erro ao ler o ficheiro!'
+                        }))
+                        res.end()
+                    }
+                })
             } else {
                 res.writeHead(200, {
                     'Content-Type': 'text/html; charset=utf-8'
