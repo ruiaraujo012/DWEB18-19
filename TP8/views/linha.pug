@@ -1,0 +1,12 @@
+if linhas == 0
+    tr
+        th Nenhum ficheiro encontrado.
+else
+    tr
+        th Ficheiro
+        th Descrição
+    each l in linhas
+        tr
+            td
+                a(href='uploads/' + l.name target="_blank")= l.name
+            td= l.desc
